@@ -1,1 +1,1 @@
-# etch-a-sketch
+Forth Project assigned by The Odin Project. I got used to DOM manipulation and using html css and javascript together.
