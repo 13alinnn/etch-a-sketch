@@ -1,6 +1,6 @@
-let cont = document.querySelector("#container");
+const cont = document.querySelector("#container");
 const CONTAINER_LENGTH = 960;
-const NUMBER_OF_BOXES = 20;
+let NUMBER_OF_BOXES = 20;
 let color = 'black';
 createGrid();
 
@@ -19,14 +19,23 @@ function createBox() {
 }
 
 function createGrid() {
-	for (let i = 0; i < NUMBER_OF_BOXES * NUMBER_OF_BOXES; i++) {
-		createBox();
-	}
-}
-
-const squares = document.querySelectorAll('.pixels');
-squares.forEach((square) => {
-    square.addEventListener('mouseenter', () => {
+	if(!(document.querySelector('.pixels'))) //only appends new squares if the container is empty
+		for (let i = 0; i < NUMBER_OF_BOXES * NUMBER_OF_BOXES; i++) {
+			createBox();
+		}
+	const squares = document.querySelectorAll('.pixels');
+	squares.forEach((square) => {
+    	square.addEventListener('mouseenter', () => {
         square.style.backgroundColor = 'black';
     });
 });
+}
+
+
+
+function removeGrid() {
+	const sq = document.querySelectorAll('.pixels');
+	sq.forEach((square) => {
+		cont.removeChild(square);
+	})
+}
