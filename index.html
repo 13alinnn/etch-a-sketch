@@ -8,14 +8,18 @@
     <script src='./script.js' defer></script>
 </head>
 <body>
-    <h1>Etch-a-Sketch</h1>
-    <label for='slider'>Number of pixels</label>
-    <div class='slide'>
-        <button id='minus'>-</button>
-        <input type='range' id='slider' min='10' max='100' step='1' value='20'>
-        <button id='plus'>+</button>
+    <div class='header'>
+        <h1>Etch-a-Sketch</h1>
+        <div class='slide'>
+            <label for='slider'>Number of pixels</label>
+            <div class='slider'>
+                <button id='minus'>-</button>
+                <input type='range' id='slider' min='10' max='64' step='1' value='20'>
+                <button id='plus'>+</button>
+            </div>
+            <p class='sliderValue'></p>
+        </div>
     </div>
-    <p></p>
     <div id='container'></div>
     <button id='clear'>Clear</button>
 </body>

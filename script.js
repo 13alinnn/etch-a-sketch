@@ -5,9 +5,11 @@ const para = document.querySelector('p');
 const slider = document.querySelector('input');
 const plusBtn = document.querySelector('#plus');
 const minusBtn = document.querySelector('#minus');
-para.textContent = slider.value;
 let NUMBER_OF_BOXES = 20;
 let color = 'black';
+let mouseClicked = false;
+
+para.textContent = `${NUMBER_OF_BOXES} x ${NUMBER_OF_BOXES}`;
 createGrid();
 
 
@@ -31,9 +33,17 @@ function createGrid() {
 		}
 	const squares = document.querySelectorAll('.pixels');
 	squares.forEach((square) => {
-    	square.addEventListener('mouseenter', () => {
-        square.style.backgroundColor = color;
-    });
+    	square.addEventListener('mousedown', () => {
+			mouseClicked = true;
+			square.style.backgroundColor = color;
+		});
+		square.addEventListener('mouseover', () => {
+			if(mouseClicked)
+				square.style.backgroundColor = color;
+		});
+		square.addEventListener('mouseup', () => {
+			mouseClicked = false;
+		});
 });
 }
 btn.addEventListener('click', () => {
@@ -53,7 +63,7 @@ slider.addEventListener('input', () => {
 	NUMBER_OF_BOXES = Number(slider.value);
 	removeGrid();
 	createGrid();
-	para.textContent = NUMBER_OF_BOXES;
+	para.textContent = `${NUMBER_OF_BOXES} x ${NUMBER_OF_BOXES}`;
 });
 
 plusBtn.addEventListener('click', () => {
@@ -61,7 +71,7 @@ plusBtn.addEventListener('click', () => {
 	slider.value = NUMBER_OF_BOXES;
 	removeGrid();
 	createGrid();
-	para.textContent = NUMBER_OF_BOXES;
+	para.textContent = `${NUMBER_OF_BOXES} x ${NUMBER_OF_BOXES}`;
 });
 
 minusBtn.addEventListener('click', () => {
@@ -69,5 +79,5 @@ minusBtn.addEventListener('click', () => {
 	slider.value = NUMBER_OF_BOXES;
 	removeGrid();
 	createGrid();
-	para.textContent = NUMBER_OF_BOXES;
+	para.textContent = `${NUMBER_OF_BOXES} x ${NUMBER_OF_BOXES}`;
 });
