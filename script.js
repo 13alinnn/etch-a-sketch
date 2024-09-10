@@ -1,5 +1,5 @@
 const cont = document.querySelector('#container');
-const CONTAINER_LENGTH = 960;
+const CONTAINER_LENGTH = 500;
 const btn = document.querySelector('#clear');
 const para = document.querySelector('p');
 const slider = document.querySelector('input');

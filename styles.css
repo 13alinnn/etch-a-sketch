@@ -2,6 +2,8 @@
 *::before,
 *::after {
     margin: 0;
+    padding: 0;
+    border: 0;
     box-sizing: border-box;
 }
 html, body {
@@ -33,14 +35,14 @@ body {
     background-color: white;
     box-sizing: border-box;
     border: 1px solid black;
-    height: 962px;
-    width: 964px;
+    height: 500px;
+    width: 502px;
 }
 .pixels {
-    flex-grow: 1;
+    /* flex-grow: 1; */
 }
 .header {
-    width: 960px;
+    width: 500px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -49,10 +51,6 @@ body {
 .sliderValue {
     margin: 0;
 }
-#colorPicker {
-    background-color: black;
-    color:black;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+button {
+    padding: 0 5px;
 }
