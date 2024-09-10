@@ -6,6 +6,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    background-color: #90aead;
 }
 #container {
     display: flex;
@@ -13,6 +15,9 @@ body {
     background-color: white;
     box-sizing: border-box;
     border: 1px solid black;
-    height: 802px;
-    width: 802px;
+    height: 964px;
+    width: 964px;
+}
+.pixels {
+    flex-grow: 1;
 }
