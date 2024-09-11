@@ -19,7 +19,7 @@ createGrid();
 function createBox() {
 	const div = document.createElement('div');
     div.classList.add('pixels');
-	div.style.border = '1px solid black';
+	// div.style.border = '1px solid black';
 	div.style.boxSizing = 'border-box';
 	div.style.width = String(CONTAINER_LENGTH / NUMBER_OF_BOXES) + 'px';
 	div.style.height = String(CONTAINER_LENGTH / NUMBER_OF_BOXES) + 'px';
