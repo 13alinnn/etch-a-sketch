@@ -1,5 +1,5 @@
-const cont = document.querySelector('#container');
 const CONTAINER_LENGTH = 500;
+const cont = document.querySelector('#container');
 const btn = document.querySelector('#clear');
 const para = document.querySelector('p');
 const slider = document.querySelector('input');
@@ -9,17 +9,12 @@ let NUMBER_OF_BOXES = 20;
 let color = 'black';
 let mouseClicked = false;
 
-para.textContent = `${NUMBER_OF_BOXES} x ${NUMBER_OF_BOXES}`;
+para.textContent = `${NUMBER_OF_BOXES} x ${NUMBER_OF_BOXES}`; //initial value of 20x20
 createGrid();
-
-
-
-
 
 function createBox() {
 	const div = document.createElement('div');
     div.classList.add('pixels');
-	// div.style.border = '1px solid black';
 	div.style.boxSizing = 'border-box';
 	div.style.width = String(CONTAINER_LENGTH / NUMBER_OF_BOXES) + 'px';
 	div.style.height = String(CONTAINER_LENGTH / NUMBER_OF_BOXES) + 'px';
@@ -33,7 +28,7 @@ function createGrid() {
 		}
 	const squares = document.querySelectorAll('.pixels');
 	squares.forEach((square) => {
-    	square.addEventListener('mousedown', () => {
+		square.addEventListener('mousedown', () => {
 			mouseClicked = true;
 			square.style.backgroundColor = color;
 		});
@@ -46,11 +41,11 @@ function createGrid() {
 		});
 });
 }
+
 btn.addEventListener('click', () => {
 	removeGrid();
 	createGrid();
 });
-
 
 function removeGrid() {
 	const sq = document.querySelectorAll('.pixels');

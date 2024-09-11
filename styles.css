@@ -6,9 +6,11 @@
     border: 0;
     box-sizing: border-box;
 }
+
 html, body {
     height: 100%;    
 }
+
 body {
     display: flex;
     align-items: center;
@@ -17,6 +19,7 @@ body {
     background-color: #90aead;
     gap:20px;
 }
+
 .slide {
     display: flex;
     flex-direction: column;
@@ -24,11 +27,13 @@ body {
     justify-content: space-between;
     gap: 5px;
 }
+
 .slider {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+
 #container {
     display: flex;
     flex-wrap: wrap;
@@ -38,9 +43,7 @@ body {
     height: 500px;
     width: 502px;
 }
-.pixels {
-    /* flex-grow: 1; */
-}
+
 .header {
     width: 500px;
     display: flex;
@@ -48,9 +51,11 @@ body {
     align-items: center;
     justify-content: space-around;
 }
+
 .sliderValue {
     margin: 0;
 }
+
 button {
     padding: 0 5px;
 }
