@@ -8,8 +8,51 @@ const minusBtn = document.querySelector('#minus');
 let NUMBER_OF_BOXES = 20;
 let color = 'black';
 let mouseClicked = false;
-
+const colorPickerText = document.querySelector('h3')
 para.textContent = `${NUMBER_OF_BOXES} x ${NUMBER_OF_BOXES}`; //initial value of 20x20
+const redBtn = document.querySelector('.colorbox.red');
+redBtn.addEventListener('click', () => {
+	color = 'red';
+	colorPickerText.style.color = color;
+});
+const greenBtn = document.querySelector('.colorbox.green');
+greenBtn.addEventListener('click', () => {
+	color = 'green';
+	colorPickerText.style.color = color;
+});
+const blueBtn = document.querySelector('.colorbox.blue');
+blueBtn.addEventListener('click', () => {
+	color = 'blue';
+	colorPickerText.style.color = color;
+});
+const yellowBtn = document.querySelector('.colorbox.yellow') 
+yellowBtn.addEventListener('click', () => {
+	color = 'yellow';
+	colorPickerText.style.color = color;
+});
+blackBtn = document.querySelector('.colorbox.black');
+blackBtn.addEventListener('click', () => {
+	color = 'black';
+	colorPickerText.style.color = color;
+});
+whiteBtn = document.querySelector('.colorbox.white');
+whiteBtn.addEventListener('click', () => {
+	color = 'white';
+	colorPickerText.style.color = color;
+});
+// const colorButtons = document.querySelectorAll('.colorbox');
+// colorButtons.forEach((colorButton) => {
+// 	if(colorButton.classList.contains('red')) colorOfThisButton = 'red';
+// 	else if(colorButton.classList.contains('green')) colorOfThisButton = 'green';
+// 	else if(colorButton.classList.contains('blue')) colorOfThisButton = 'blue';
+// 	else if(colorButton.classList.contains('yellow')) colorOfThisButton = 'yellow';
+// 	else if(colorButton.classList.contains('white')) colorOfThisButton = 'white';
+// 	else if(colorButton.classList.contains('black')) colorOfThisButton = 'black';
+// 	colorButton.addEventListener('click', () => {
+// 		color = colorOfThisButton;
+// 	});
+// });
+
 createGrid();
 
 function createBox() {

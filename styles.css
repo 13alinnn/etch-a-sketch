@@ -67,7 +67,7 @@ button {
 
 .color-picker {
     display: flex;
-    gap: 2px;
+    gap: 10px;
 }
 
 .colorbox {
@@ -95,6 +95,6 @@ button {
     background-color: black;
 }
 
-.colorbox.select {
+.colorbox.white {
     background-color: white;
 }
