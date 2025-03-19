@@ -32,6 +32,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-basis: 0;
 }
 
 #container {
@@ -42,6 +43,10 @@ body {
     /* border: 1px solid black; */
     height: 500px;
     width: 502px;
+}
+
+h1 {
+    margin-top: 25px;
 }
 
 .header {
@@ -58,4 +63,38 @@ body {
 
 button {
     padding: 0 5px;
+}
+
+.color-picker {
+    display: flex;
+    gap: 2px;
+}
+
+.colorbox {
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+}
+
+.colorbox.red {
+    background-color: red;
+}
+
+.colorbox.blue {
+    background-color: blue;
+}
+
+.colorbox.green {
+    background-color: green;
+}
+
+.colorbox.yellow {
+    background-color: yellow;
+}
+.colorbox.black {
+    background-color: black;
+}
+
+.colorbox.select {
+    background-color: white;
 }
